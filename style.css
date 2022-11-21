@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;0,900;1,500;1,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow: hidden;
+    font-family: 'Poppins', sans-serif;
+
+}
+.container{
+    padding: 5 10px;
+    width: 100%;
+    min-height: 100vh;
+}
+.container::before{
+    position: absolute;
+    content: '';
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    left: -20%;
+    top: 20%;
+    animation: obj1 50s linear infinite;
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+
+}
+.container::after{
+    position: absolute;
+    content: '';
+    width: 150px;
+    height: 150px;
+    border-radius:50%;
+    left: 50%;
+    background-color: #FAD961;
+    background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%);
+
+    top: 15%;
+}
+@keyframes obj1{
+    50%{
+        left: 10%;
+        top: 40%;
+    }
+    
+}
+@keyframes obj2{
+    50%{
+        left: 30%;
+        top: 10%;
+    }
+
+}
+.nav-bar{
+    text-decoration: none;
+    padding: 10px 20px;
+    width: 100%;
+    position: sticky;
+    height: 70px;
+    line-height: 50px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 111;
+}
+.nav-bar  {
+    text-align: center;
+    display: flex;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.logo{
+    text-align: center;
+    display: flex;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 40px;
+    padding: 5px 19px;
+    position: relative;
+    border-radius: 15px;
+    
+}
+nav ul li a{
+    padding: 5px 7px;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+b{
+    font-size: 40px;
+    color: rgb(237, 233, 233);
+}
+nav ul li a:hover{
+    border-radius: 15px;
+    padding: 5px 7px;
+    background-color: #f37335;
+    transition: 0.4s
+}
+.active{
+    border-radius: 15px;
+    background-color: rgb(50, 102, 102);
+}
+.link a{
+    margin: 0 5px;
+    font-size: 20px;
+    color: #f37335;
+
+}
+.link{
+    display: block;
+}
+.link a:hover{
+    color: rgb(50, 102, 102);
+    transition: 0.8s
+}
+.content{
+    padding: 0 10%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.text-heading{
+    display: block;
+    position: relative;
+}
+.cols{
+    width: 50%;
+}
+.col1{
+    padding-top: 250px;
+}
+.topLine{
+    letter-spacing: 5px;
+    font-size: 75px;
+    color: rgb(55, 49, 49);
+    text-transform: inherit;  
+    display: block;
+    position: relative;
+    font-weight: 800;
+}
+.topLine::after{
+    content: '';
+    position: absolute;
+    width: 45px;
+    height: 4px;
+}
+h1{
+    display: block;
+    font-stretch: expanded;
+    font-style: inherit;
+    font-weight: 800;
+    font-family: 'Poppins';
+    color: rgb(6, 49, 49);
+}
+.multiText{
+    text-transform: capitalize; 
+    color: rgb(118, 118, 231); 
+}
+.col0{
+    z-index: 1;  
+
+}
+.btns{
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+}
+         
+.btns button{
+    background-image: linear-gradient(to right, #F7971E 0%, #FFD200  51%, #F7971E  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    font-weight: 700;
+    border: none;
+    font-family: 'Poppins';
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: rgb(62, 55, 55);            
+    box-shadow: 0 0 20px rgb(45, 45, 45);
+    border-radius: 10px;
+    display: block;
+     }
+
+button:hover {
+       background-position: right center; /* change the direction of the change here */
+       color: #fff;
+       text-decoration: none;
+}
+img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgbox img{
+    position: relative;
+    height: 100%;
+    width: calc(130% - 80px);
+    top: -100px;
+    right: 50px;
+    transform: rotateY(180dg);
+    animation: animateNhat 2s linear infinite;
+}
+.imgbox #splash{
+    position: absolute;
+    width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-10%,-30%);
+    filter: saturate(200%);
+    animation: animateSplash 4s linear infinite;
+
+}
+@keyframes animateNhat {
+    50%{
+        right: 30px;
+        top: -90px;
+    }
+}
+@keyframes animateSplash {
+    40%{
+        top: 60%;
+        left: 50%;
+    }
+}
